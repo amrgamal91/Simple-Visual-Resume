@@ -1,0 +1,163 @@
+/*Color Palette:
+#2B2D42   dark blue
+#8D99AE   lightblue
+#EDF2F4   blue/white
+#EF233C   Red
+*/
+
+/********************* Global Style
+--------------------------------------------------------------------------------*/
+/*apply natural box layout model to all elements , but allowing components to change */
+html{
+  box-sizing:border-box;
+}
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+body{
+  background: #3d464f;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0;
+  font-size: 20px;
+  padding-top: 20px;
+}
+h1,h2 {
+  font-family: 'Caveat Brush', cursive;
+  font-weight: 400;
+}
+h1 {
+  font-size: 70px;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+a {
+  color:#EF233C;
+}
+h4{
+  font-weight: bold;
+  text-decoration: underline;
+}
+a:hover {
+text-decoration: none; /*remove the default underline whin it hoverd*/
+}
+h5 ~ ul{
+  margin:0;
+}
+h5{
+  margin:0;
+}
+.content-wrap{
+  max-width: 950px; /*flexibilty:if the browser width less than 950 then fit it to content width with max width 950px*/
+  margin: 0 auto;
+  padding: 50px;
+  overflow: auto;
+
+}
+
+
+/* Header and Footer
+------------------------------------------------------------------------------------*/
+header,footer {
+  background: :#3d464f;
+  color:#8D99AE;
+
+}
+.profile-img {
+  border-radius:50%;
+}
+header {
+  text-align: left;
+  font-size: 18px;
+
+}
+header h1, header h2 {
+  color:#EDF2F4;
+  margin:0;
+}
+
+footer{
+  text-align: center;
+}
+
+/*-------------------------------------------------------*/
+
+
+.contact-info a {
+  padding:10px;
+  display: inline-block;  /*to not overlap on other elements and keep sapce arount it*/
+}
+.qualifications{
+  background: #cccccc;
+}
+
+/* Navigation
+----------------------------------*/
+nav{
+  text-align: center;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+ padding: 10px;
+
+}
+nav a{
+  display: inline;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+
+}
+
+/* Work Experience
+----------------------------------*/
+.work {
+  background: #eeeeee;
+}
+
+.companyName{
+  color: red;
+  display: inline;
+}
+.hiredate{
+  color:#8D99AE;
+  display: inline;
+  font-size: 16px;
+  float: right;
+}
+/* Education
+----------------------------------*/
+.education {
+  /*background: #d45050;*/
+
+  background: linear-gradient(rgba(141,153,174,0.8),rgba(141,153,174,0.8)),url(../images/education.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+/* Media queries
+----------------------------------*/
+@media (min-width:900px){
+  .col-narrow{
+    width: 30%;
+    float: left;
+    min-height: 175px;
+  }
+  .col-wide{
+    width: 70%;
+    float: left;
+    padding-left: 20px;
+    min-height: 175px;
+  }
+}
+
+@media(max-width:899px){
+  header{
+    text-align: center;
+  }
+  .profile-img{
+    width: 200px;
+  }
+}
